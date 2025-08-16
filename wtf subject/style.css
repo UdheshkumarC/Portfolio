@@ -1,0 +1,223 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Add a professional background photo with overlay */
+    background: 
+        linear-gradient(rgba(34,49,63,0.85), rgba(34,49,63,0.85)),
+        url('download.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f4f4f4;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.5em;
+    color: #f4f4f4;
+}
+
+#about{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    margin: 32px auto;
+    max-width: 800px;
+    text-align: justify;
+}
+
+header {
+    background: rgba(34, 49, 63, 0.95);
+    color: #fff;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+header img {
+    border: 4px solid #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+header img:hover {
+    transform: scale(1.40);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 16px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+nav a:hover {
+    background: #fff;
+    color: #232526;
+}
+
+section {
+    background: rgba(255,255,255,0.08);
+    margin: 32px auto;
+    padding: 32px 24px;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    animation: fadeIn 1s;
+}
+
+#projects {
+    width: 100vw;
+    min-height: 60vh;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.projects-container {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: center;
+    height: 60vh;
+    min-height: 400px;
+    width: 100vw;
+    margin: 0;
+    padding: 0 5vw;
+}
+
+.project-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.project-list li {
+    background: rgba(255,255,255,0.10);
+    margin: 16px 0;
+    padding: 18px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.project-list li:hover, .project-list li.active {
+    background: #ffd700;
+    color: #232526;
+    transform: translateX(10px) scale(1.05);
+}
+
+.project-detail {
+    flex: 2;
+    background: rgba(255,255,255,0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 32px 24px;
+    min-height: 300px;
+    animation: fadeIn 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 100%;
+}
+
+.project-detail img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    border: 3px solid #ffd700;
+}
+
+.project-detail h3 {
+    font-family: 'Bebas Neue', cursive, sans-serif;
+    font-size: 2.2em;
+    color: #ffd700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.project-detail p {
+    font-size: 1.15em;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+#contact {
+    margin-top: 120px; /* Increased space above the contact section */
+}
+
+@media (max-width: 900px) {
+    .projects-container {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2vw;
+    }
+    .project-detail {
+        margin-top: 24px;
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.about-table {
+  font-family: arial, sans-serif;
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+.about-table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  
+}
+.about-table th{
+    border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: #ffd700;
+ 
+
+}
+
+.about-table tr:nth-child(odd) {
+  background-color: #232526;
+}

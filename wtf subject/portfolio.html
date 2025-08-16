@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UDHESHKUMAR C - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>UDHESHKUMAR C</h1>
+        <img src="myself.jpg" alt="Udheshkumar C" style="width:140px;height:140px;border-radius:50%;margin:16px 0; cursor:pointer;" title="To know who I am" onclick="window.open('coolie.html', '_blank')">
+        <p>Web Developer | Designer | Programmer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi I am Udheshkumar C, I am currently pursuing my <strong style="color: rgb(115, 170, 189);">M.Tech in Computer Science at Sri Sairam Engineering College, Chennai</strong>.<br><br>
+            I'm a passionate web developer with experience in <strong style="color: rgb(115, 170, 189);">HTML, CSS, and JavaScript</strong>.
+            I love building creative and user-friendly websites.
+           
+            
+        </p>
+
+<table class="about-table">
+     <h2>Schooling Documentation</h2>
+  <tr>
+    <th>Name of the institution</th>
+    <th>Class</th>
+    <th>Percentage</th>
+  </tr>
+  <tr>
+    <th>Zion matriculation higher secondary school</th>
+    <td>10th Standard</td>
+    <td>100%</td>
+  </tr>
+  <tr>
+    <th>Zion matriculation higher secondary school</th>
+    <td>12th Standard</td>
+    <td>91%</td>
+  </tr>
+  <tr>
+    <th>Sri Sairam Engineering college</th>
+    <td>M. tech CSE (5years integrated)</td>
+    <td>82.3%</td>
+  </tr>
+</table>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <ul class="project-list">
+                <li onclick="showProject(0)">
+                    <strong>Portfolio Website</strong>
+                </li>
+                <li onclick="showProject(1)">
+                    <strong>Weather App</strong>
+                </li>
+                <li onclick="showProject(2)">
+                    <strong>Task Manager</strong>
+                </li>
+            </ul>
+            <div class="project-detail" id="project-detail">
+                <img src="portfolio.jpg" alt="Portfolio Website" id="project-img">
+                <h3 id="project-title">Portfolio Website</h3>
+                <p id="project-desc">
+                    A personal portfolio website to showcase my skills, projects, and contact information. Built with HTML, CSS, and JavaScript. Features responsive design and smooth animations.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:udheshkumar1536@gmail.com">udheshkumar1536@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/udheshkumar-c-235218294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Udheshkumar C</a></p>
+        <p>GitHub: <a href="https://github.com/UdheshkumarC" target="_blank">Udheshkumar C</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 UDHESHKUMAR C</p>
+    </footer>
+    <script>
+const projects = [
+    {
+        title: "Portfolio Website",
+        desc: "A personal portfolio website to showcase my skills, projects, and contact information. Built with HTML, CSS, and JavaScript. Features responsive design and smooth animations.",
+        img: "portfolio.jpg"
+    },
+    {
+        title: "Weather App",
+        desc: "A weather application that fetches real-time weather data using a public API. Users can search for any city and get current weather, temperature, and forecast.",
+        img: "weather.jpg"
+    },
+    {
+        title: "Task Manager",
+        desc: "A simple and effective task manager to organize your daily activities. Add, edit, and delete tasks with a clean and intuitive interface.",
+        img: "tasks.jpg"
+    }
+];
+
+function showProject(index) {
+    document.getElementById('project-title').textContent = projects[index].title;
+    document.getElementById('project-desc').textContent = projects[index].desc;
+    document.getElementById('project-img').src = projects[index].img;
+    // Highlight active project
+    document.querySelectorAll('.project-list li').forEach((li, i) => {
+        li.classList.toggle('active', i === index);
+    });
+}
+
+// Set first project as active on load
+showProject(0);
+</script>
+</body>
+</html>
